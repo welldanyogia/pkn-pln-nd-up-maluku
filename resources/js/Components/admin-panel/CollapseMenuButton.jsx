@@ -6,6 +6,7 @@ import {Collapsible, CollapsibleContent, CollapsibleTrigger} from "@/Components/
 import {Button} from "@/Components/ui/button.jsx";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/Components/ui/tooltip.jsx";
 import {DropdownMenuArrow} from "@radix-ui/react-dropdown-menu";
+import {router} from "@inertiajs/react";
 
 export function CollapseMenuButton({ icon: Icon, label, active, submenus, isOpen }) {
     const isSubmenuActive = submenus.some((submenu) => submenu.active);
@@ -23,7 +24,7 @@ export function CollapseMenuButton({ icon: Icon, label, active, submenus, isOpen
             >
                 <Button
                     variant={active ? "secondary" : "ghost"}
-                    className="w-full justify-start h-10  hover:bg-[#B6D7DE]"
+                    className={`w-full justify-start h-10 hover:bg-[#B6D7DE] ${active ? "bg-fountain-blue-500/60 text-white" : ""}`}
                 >
                     <div className="w-full items-center flex justify-between">
                         <div className="flex items-center">
@@ -62,10 +63,13 @@ export function CollapseMenuButton({ icon: Icon, label, active, submenus, isOpen
                     <Button
                         key={index}
                         variant={active ? "secondary" : "ghost"}
-                        className="w-full justify-start h-10 mb-1 hover:bg-[#B6D7DE]"
-                        asChild
+                        className={`w-full justify-start h-10 mb-1 hover:bg-[#B6D7DE] ${active ? "bg-fountain-blue-500/60 text-white" : ""}`}
+                        onClick={()=>{
+                            router.get(href)
+                        }}
+                        // asChild
                     >
-                        <a href={href}>
+                        {/*<a href={href}>*/}
               <span className="mr-4 ml-2">
                 <Dot size={18} />
               </span>
@@ -79,7 +83,7 @@ export function CollapseMenuButton({ icon: Icon, label, active, submenus, isOpen
                             >
                                 {label}
                             </p>
-                        </a>
+                        {/*</a>*/}
                     </Button>
                 ))}
             </CollapsibleContent>
@@ -92,7 +96,7 @@ export function CollapseMenuButton({ icon: Icon, label, active, submenus, isOpen
                         <DropdownMenuTrigger asChild>
                             <Button
                                 variant={active ? "secondary" : "ghost"}
-                                className="w-full justify-start h-10 mb-1"
+                                className={`w-full justify-start h-10 mb-1 hover:bg-[#B6D7DE] ${active ? "bg-fountain-blue-500/60 text-white" : ""}`}
                             >
                                 <div className="w-full items-center flex justify-between">
                                     <div className="flex items-center">
@@ -123,10 +127,12 @@ export function CollapseMenuButton({ icon: Icon, label, active, submenus, isOpen
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 {submenus.map(({ href, label }, index) => (
-                    <DropdownMenuItem key={index} asChild>
-                        <a href={href} className="cursor-pointer">
+                    <DropdownMenuItem key={index} onClick={()=>{
+                        router.get(href)
+                    }} asChild>
+                        {/*<a href={href} className="cursor-pointer">*/}
                             <p className="max-w-[180px] truncate">{label}</p>
-                        </a>
+                        {/*</a>*/}
                     </DropdownMenuItem>
                 ))}
                 <DropdownMenuArrow className="fill-border" />

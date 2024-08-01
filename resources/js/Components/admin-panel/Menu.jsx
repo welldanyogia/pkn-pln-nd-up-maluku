@@ -60,7 +60,7 @@ export function Menu({ isOpen }) {
                                                         <Button
                                                             variant={active ? "secondary" : "ghost"}
                                                             onClick={()=>{
-                                                                router.get(route('superadmin.dashboard'))
+                                                                router.get(href)
                                                             }}
                                                             className={`w-full justify-start h-10 mb-1 hover:bg-[#B6D7DE] ${active ? "bg-fountain-blue-500/60 text-white" : ""}`}
                                                             // asChild

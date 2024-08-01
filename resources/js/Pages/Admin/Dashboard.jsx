@@ -5,6 +5,7 @@ import {SquareChartGantt, User, Users, Wrench} from 'lucide-react';
 import Statistic from "@/Components/Statistic.jsx";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/Components/ui/card.jsx";
 import {StatisticChart} from "@/Components/StatisticChart.jsx";
+import Table from "@/Components/Table/Dashboard/Table.jsx";
 
 export default function Dashboard({auth}) {
     return (
@@ -14,7 +15,7 @@ export default function Dashboard({auth}) {
         >
             <Head title="Dashboard"/>
 
-            <div className="py-12">
+            <div className="py-12 space-y-6">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 flex gap-4 max-lg:grid">
                     {/*<div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">*/}
                     <div
@@ -82,6 +83,24 @@ export default function Dashboard({auth}) {
                         <StatisticChart/>
                     </div>
                     {/*</div>*/}
+                </div>
+                <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                    {/*<Card>*/}
+                    {/*    <CardHeader>*/}
+                    {/*        <CardTitle>*/}
+                    {/*            Proyek*/}
+                    {/*        </CardTitle>*/}
+                    {/*        <CardDescription>*/}
+                    {/*            Menampilkan data proyek pada PLN Nusa Daya UP Maluku*/}
+                    {/*        </CardDescription>*/}
+                    {/*    </CardHeader>*/}
+                    {/*    <CardContent>*/}
+                            <Table/>
+                        {/*</CardContent>*/}
+                    {/*    <CardFooter>*/}
+                    {/*        Test*/}
+                    {/*    </CardFooter>*/}
+                    {/*</Card>*/}
                 </div>
             </div>
         </AuthenticatedAdmin>

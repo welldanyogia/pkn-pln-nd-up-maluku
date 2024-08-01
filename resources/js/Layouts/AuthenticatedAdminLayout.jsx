@@ -34,7 +34,7 @@ export default function AuthenticatedAdmin({ user, header, children }) {
     return (
         <AdminPanelLayout>
             <ContentLayout title={pageTitle} user={user}>
-                <CustomBreadcrumb url={url}/>
+                {/*<CustomBreadcrumb url={url}/>*/}
                 {children}
             </ContentLayout>
         </AdminPanelLayout>
