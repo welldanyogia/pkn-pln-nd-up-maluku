@@ -36,11 +36,10 @@ class AuthenticatedSessionController extends Controller
         $user = Auth::user();
 //        return redirect()->intended(route('dashboard', absolute: false));
         switch ($user->role) {
+            case 'admin':
             case 'superadmin':
                 return redirect()->intended(route('superadmin.dashboard'))->with('refresh', true);
-            case 'admin':
-                return redirect()->intended(route('superadmin.dashboard'))->with('refresh', true);
-//            case 'user':
+            //            case 'user':
 //                return redirect()->intended(route('user.dashboard'));
             default:
                 return redirect()->intended(route('dashboard'))->with('refresh', true);

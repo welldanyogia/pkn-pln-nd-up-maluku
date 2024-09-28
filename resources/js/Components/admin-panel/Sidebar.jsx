@@ -33,12 +33,15 @@ export function Sidebar() {
                     asChild
                 >
                     <Link to="/admin/dashboard" className="flex items-center gap-2 text-fountain-blue-500">
-                        {/*<PanelsTopLeft className="w-6 h-6 mr-1" />*/}
-                        <img src={"/logo.png"} width={"80"} height={"80"} className='p-2 mr-1'/>
-
+                        <img
+                            src={"/aku-jago.png"}
+                            alt="Logo"
+                            className="p-2" // Menggunakan padding untuk jarak
+                            style={{ width: 'auto', height: 'auto', maxWidth: '100px', maxHeight: '100px', objectFit: 'contain' }} // Menjaga ukuran proporsional
+                        />
                         <h1
                             className={cn(
-                                "font-bold text-lg whitespace-nowrap transition-[transform,opacity,display] ease-in-out duration-300",
+                                "font-bold text-lg text-fountain-blue-400 whitespace-nowrap transition-[transform,opacity,display] ease-in-out duration-300",
                                 sidebar?.isOpen === false
                                     ? "-translate-x-96 opacity-0 hidden"
                                     : "translate-x-0 opacity-100"
@@ -48,6 +51,7 @@ export function Sidebar() {
                         </h1>
                     </Link>
                 </Button>
+
                 <Menu isOpen={sidebar?.isOpen} />
             </div>
         </aside>

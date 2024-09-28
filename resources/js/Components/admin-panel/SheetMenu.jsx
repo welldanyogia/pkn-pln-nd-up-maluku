@@ -23,8 +23,8 @@ export function SheetMenu() {
                     >
                         <Link to="/admin/dashboard" className="flex items-center gap-2">
                             {/*<PanelsTopLeft className="w-6 h-6 mr-1" />*/}
-                            <img src={"/logo.png"} width={"80"} height={"80"} className='p-2 mr-1'/>
-                            <h1 className="font-bold text-lg">{appName}</h1>
+                            <img src={"/aku-jago.png"} width={"80"} height={"80"} className='p-2 mr-1'/>
+                            <h1 className="font-bold text-lg text-fountain-blue-400">{appName}</h1>
                         </Link>
                     </Button>
                 </SheetHeader>

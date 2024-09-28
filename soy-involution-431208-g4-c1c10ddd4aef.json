@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "soy-involution-431208-g4",
+  "private_key_id": "c1c10ddd4aefe0429a7980e4e98c7ddb56afe932",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCx2r0SndGkRlBm\nbKLy1peFT4CcYH247wXXUkOURoGep5GXmiBMZVa2owvd2lx/A4DuLt2ba1KWpVu9\nimMI0yyUTYsIfOpfgRaLhpMynwymJZCX26gUPx5t2e2kaaIM7ZzD2n6QXqncK4t3\nS7nFKH4hg6APK5vlgrl1sh1Ihx2tSci1Ryy0pqBTBxYdyKhj580JcdGlFPwzdeZP\n96pibOx+xjeb7QVgXtZDmEODaU3+56nJLkx7Q+WNZ2hQabLOuAFePTK5+ZiZsT9N\ngRL30APY+rhOEbW1lPh1kb/Liyul1b5LNjLZbXEjzY1g00uNC7ZxJdxo3NRNdcVT\ng/YnsAExAgMBAAECggEAAUJwi/F8BHgq2QkVmWBWysNqc7YsqeqTQ7wGukCw7t2K\n7nOO7zzZSUerMq9f4I7f6fO+nSRleGn3S60s70A5hW+q07cpT/1akB6h+wg79Z44\nKnGMTpL1nlPbxQT8P/eWqBoFBZjLyP6yRTsrTBD8BpEibO2O0FFSZtSycemlScwv\nmjz+md99RS/NU5B3LV6PPCfzFybgzQdKMwcK/cm47G7fpf4PwIGJFSSNNY8iWMnQ\nfiCYxe6jPU2wii56an3xpSxe4whVbfEluQiV3fMnOswxoTsAF3WmZsiI+YmFbw30\nYrOQjpluXcEJ5rec2k7OFXzgp1Uy27zk1PYSpl1/0QKBgQDzHRnkcBEvgl3OOw+3\napvX2w0DyFiqAj6FULKVTpkOwLo7mEi5NitVde8OBFIVWj+8gdrA0E82Ps5xPsOw\nl0rraIycpLRs7EPV3fysNX+r6v0BdOsknOTP2uOz4H2NQ3XprbaLEgagUnlFYZda\n6eTAPb3SQyZuTpDpA305kzmrlQKBgQC7SBxnfonHSH21qzzeInUgGMIbKPtFg2Vj\nNHaPUBue3VWFO7ttrL7RHVWo6htPiyDJ8X677/EPW9o/nijStW3v0FmaDX4ajwl5\nQ/iH9LH2b+ibTMR+kwn9E7taDGduoXWmq7DS/6W8rp76n5ffQEyKPPslR4dXpTuy\nOsmudeN4LQKBgQCaBljuKrYopG6sBy045lkgE88WE2thIpTbv7m08Jv2BdK3iQ6i\nERi5R0OSXNhoYMo6swaV3CQjWP1QMBSpH+E+bfmQEKWi0LlVmRPJQwfFMtbigmGr\ny58HtUVIJDVHN3NP/lfFmkEKd9YPR/othjwAM928hgCmKC6VAjnnLUh/VQKBgDak\n2bTQ1P6ShitlpULjJu2Qi8JE+NvVdNW3TwiNxSFbT0KqpQthJeP5/S5l8EYLQCvs\nDKBlaB6lHE8HpL2mNkeMsTgjy7GQHqGFVZTFrs9K48G8anDMElQHV9j0WZGMBrn0\nyokmEoO1J6nUuwlmx25mUJkV/8Vw7rQYNxRyTUaZAoGBAOebTOqHzkpt0TEf4E5f\nhS9at1KOHC4LmKgW5xvBc0oFNOeiH+pmkIFygKwZHqnQxqPXhbV3v0zmgQg0mh3K\n6TiNdDfXG6OfXJReuVmzF3hvC8PM8lSd77Np1b7psE9vVn9DgWV8PM/rlshTzzfI\n7J9IGY6UFITjHwUVsdKRZftE\n-----END PRIVATE KEY-----\n",
+  "client_email": "webrana-test-storage@soy-involution-431208-g4.iam.gserviceaccount.com",
+  "client_id": "104791378923771447722",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/webrana-test-storage%40soy-involution-431208-g4.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

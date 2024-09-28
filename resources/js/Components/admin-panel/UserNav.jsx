@@ -43,9 +43,9 @@ export function UserNav({user}) {
                         <DropdownMenuTrigger asChild>
                             <Button
                                 variant="outline"
-                                className="relative h-10 w-54 rounded-xl bg-fountain-blue-400 text-white hover:bg-gradient-to-r from-white to-fountain-blue-400 gap-4  hover:text-fountain-blue-500"
+                                className="relative h-10 w-54 max-sm:w-auto max-sm:gap-0 rounded-xl bg-fountain-blue-400 text-white hover:bg-gradient-to-r from-white to-fountain-blue-400 gap-4  hover:text-fountain-blue-500"
                             >
-                                <div className="flex flex-col space-y-1">
+                                <div className="flex flex-col space-y-1 max-sm:hidden">
                                     <p className="text-sm text-left font-medium leading-none border-b-2 ">{user?.name}</p>
                                     <p className="text-xs text-left leading-none text-muted-foreground">
                                         {user?.email}
@@ -74,16 +74,16 @@ export function UserNav({user}) {
                 <DropdownMenuSeparator/>
                 <DropdownMenuGroup>
                     <DropdownMenuItem className="hover:cursor-pointer" asChild>
-                        <Link to="/dashboard" className="flex items-center">
-                            <LayoutGrid className="w-4 h-4 mr-3 text-muted-foreground"/>
+                        <a href="/dashboard" className="flex items-center">
+                            <LayoutGrid className="w-4 h-4 mr-3 text-muted-foreground" />
                             Dashboard
-                        </Link>
+                        </a>
                     </DropdownMenuItem>
                     <DropdownMenuItem className="hover:cursor-pointer" asChild>
-                        <Link to="/dashboard/profile" className="flex items-center">
+                        <a href="/profile" className="flex items-center">
                             <User className="w-4 h-4 mr-3 text-muted-foreground"/>
-                            Account
-                        </Link>
+                            Profil
+                        </a>
                     </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator/>

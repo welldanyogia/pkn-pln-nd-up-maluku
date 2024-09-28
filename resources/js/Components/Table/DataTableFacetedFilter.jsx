@@ -19,14 +19,19 @@ import {
 } from "@/Components/ui/popover";
 import { Separator } from "@/Components/ui/separator";
 
-export function DataTableFacetedFilter({
-                                           column,
-                                           title,
-                                           options,
-                                       }) {
+export function DataTableFacetedFilter({ column, title, options }) {
     const facets = column?.getFacetedUniqueValues();
-    console.log(facets)
     const selectedValues = new Set(column?.getFilterValue() || []);
+
+    const handleSelect = (value) => {
+        const updatedSelectedValues = new Set(selectedValues);
+        if (updatedSelectedValues.has(value)) {
+            updatedSelectedValues.delete(value);
+        } else {
+            updatedSelectedValues.add(value);
+        }
+        column?.setFilterValue(Array.from(updatedSelectedValues));
+    };
 
     return (
         <Popover>
@@ -34,7 +39,7 @@ export function DataTableFacetedFilter({
                 <Button variant="outline" size="sm" className="h-8 border-dashed">
                     <PlusCircledIcon className="mr-2 h-4 w-4" />
                     {title}
-                    {selectedValues.size > 0 && (
+                    {selectedValues?.size > 0 && (
                         <>
                             <Separator orientation="vertical" className="mx-2 h-4" />
                             <Badge
@@ -76,20 +81,20 @@ export function DataTableFacetedFilter({
                         <CommandEmpty>No results found.</CommandEmpty>
                         <CommandGroup>
                             {options.map((option) => {
-                                const isSelected = selectedValues.has(option.value);
+                                const isSelected = selectedValues.has(option.value)
                                 return (
                                     <CommandItem
                                         key={option.value}
                                         onSelect={() => {
                                             if (isSelected) {
-                                                selectedValues.delete(option.value);
+                                                selectedValues.delete(option.value)
                                             } else {
-                                                selectedValues.add(option.value);
+                                                selectedValues.add(option.value)
                                             }
-                                            const filterValues = Array.from(selectedValues);
+                                            const filterValues = Array.from(selectedValues)
                                             column?.setFilterValue(
                                                 filterValues.length ? filterValues : undefined
-                                            );
+                                            )
                                         }}
                                     >
                                         <div
@@ -100,7 +105,7 @@ export function DataTableFacetedFilter({
                                                     : "opacity-50 [&_svg]:invisible"
                                             )}
                                         >
-                                            <CheckIcon className="h-4 w-4" />
+                                            <CheckIcon className={cn("h-4 w-4")} />
                                         </div>
                                         {option.icon && (
                                             <option.icon className="mr-2 h-4 w-4 text-muted-foreground" />
@@ -112,7 +117,7 @@ export function DataTableFacetedFilter({
                       </span>
                                         )}
                                     </CommandItem>
-                                );
+                                )
                             })}
                         </CommandGroup>
                         {selectedValues.size > 0 && (

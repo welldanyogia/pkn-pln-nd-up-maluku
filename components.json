@@ -6,12 +6,15 @@
   "tailwind": {
     "config": "tailwind.config.js",
     "css": "resources/css/app.css",
-    "baseColor": "#57b5c6",
+    "baseColor": "zinc",
     "cssVariables": false,
     "prefix": ""
   },
   "aliases": {
     "components": "@/Components",
-    "utils": "@/lib/utils"
+    "utils": "@/lib/utils",
+    "ui": "@/Components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
   }
 }

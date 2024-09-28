@@ -1,7 +1,7 @@
 "use client";
 
 import { Cross2Icon } from "@radix-ui/react-icons";
-// import { Table } from "@tanstack/react-table";
+// import { TableTK } from "@tanstack/react-table";
 
 import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
@@ -9,32 +9,10 @@ import { Input } from "@/Components/ui/input";
 
 // import { priorities, statuses } from "../data/data";
 import { DataTableFacetedFilter } from "./DataTableFacetedFilter.jsx";
-import {statuses} from "@/Components/Table/Dashboard/Column.jsx";
+import {categories, statuses} from "@/Components/Table/Dashboard/Column.jsx";
 
-export function DataTableToolbar({ table }) {
+export function DataTableToolbar({ table,category }) {
     const isFiltered = table.getState().columnFilters.length > 0;
-    const categories = [
-        {
-            label:"PEMBANGKIT",
-            value:"PEMBANGKIT",
-        },
-        {
-            label:"DISTRIBUSI",
-            value:"DISTRIBUSI"
-        },
-        {
-            label:"PELAYANAN PELANGGAN",
-            value:"PELAYANAN PELANGGAN",
-        },
-        {
-            label:"TRANSMISI",
-            value:"TRANSMISI",
-        },
-        {
-            label:"AIL DOWNLOADER",
-            value:"AIL DOWNLOADER",
-        }
-    ]
 
 
     return (
@@ -44,16 +22,16 @@ export function DataTableToolbar({ table }) {
                     <DataTableFacetedFilter
                         column={table.getColumn("category")}
                         title="Category"
-                        options={categories}
+                        options={category}
                     />
                 )}
-                {table.getColumn("status") && (
-                    <DataTableFacetedFilter
-                        column={table.getColumn("status")}
-                        title="Status"
-                        options={statuses}
-                    />
-                )}
+                {/*{table.getColumn("status") && (*/}
+                {/*    <DataTableFacetedFilter*/}
+                {/*        column={table.getColumn("status")}*/}
+                {/*        title="Status"*/}
+                {/*        options={statuses}*/}
+                {/*    />*/}
+                {/*)}*/}
                 {/*{table.getColumn("priority") && (*/}
                 {/*    <DataTableFacetedFilter*/}
                 {/*        column={table.getColumn("priority")}*/}

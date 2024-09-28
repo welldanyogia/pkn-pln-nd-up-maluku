@@ -30,7 +30,7 @@ import {DataTableFacetedFilter} from "@/Components/Table/DataTableFacetedFilter.
 import {getData} from "./Data.js"
 import {DataTableToolbar} from "@/Components/Table/DataTableToolbar.jsx";
 
-export function DataTable({columns, data}) {
+export function DataTable({columns, data,category}) {
     const [rowSelection, setRowSelection] = useState({})
     const [columnVisibility, setColumnVisibility] = useState({})
     const [columnFilters, setColumnFilters] = useState([])
@@ -116,7 +116,7 @@ export function DataTable({columns, data}) {
                                     }
                                     className="max-w-sm"
                                 />
-                                <DataTableToolbar table={table} />
+                                <DataTableToolbar table={table} category={category}/>
                             </div>
                         </div>
 
@@ -124,7 +124,7 @@ export function DataTable({columns, data}) {
                     </div>
                 </CardHeader>
                 <CardContent className={"rounded-xl"}>
-                    <div className="flex items-center space-x-2  w-fit">
+                    <div className="flex items-center space-x-2 mb-3 w-fit">
                         <p className="text-sm font-medium">Rows per page</p>
                         <Select
                             value={`${table.getState().pagination.pageSize}`}

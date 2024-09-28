@@ -12,6 +12,7 @@ import {
 } from "@/Components/ui/dropdown-menu";
 
 export function DataTableViewOptions({ table }) {
+    console.log(table.getAllColumns())
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -37,11 +38,11 @@ export function DataTableViewOptions({ table }) {
                         return (
                             <DropdownMenuCheckboxItem
                                 key={column.id}
-                                className="capitalize"
+                                className="capitalize overflow-hidden text-ellipsis whitespace-nowrap min-w-[100px] max-w-[150px] inline-block"
                                 checked={column.getIsVisible()}
                                 onCheckedChange={(value) => column.toggleVisibility(!!value)}
                             >
-                                {column.id}
+                                {column.columnDef.title ?? column.id}
                             </DropdownMenuCheckboxItem>
                         );
                     })}

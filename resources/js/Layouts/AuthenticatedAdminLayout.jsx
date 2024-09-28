@@ -8,9 +8,9 @@ import AdminPanelLayout from "@/Layouts/AdminPanelLayout.jsx";
 import { ContentLayout } from "@/Components/admin-panel/ContentLayout.jsx";
 import CustomBreadcrumb from "@/Components/CustomBreadCrumb.jsx";
 
-export default function AuthenticatedAdmin({ user, header, children }) {
+export default function AuthenticatedAdmin({ user, header, children,title,className }) {
     const { url } = usePage().props; // Get the current URL from Inertia's page props
-    const [pageTitle, setPageTitle] = useState("Webrana"); // Default title
+    const [pageTitle, setPageTitle] = useState(title); // Default title
 
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
@@ -33,7 +33,7 @@ export default function AuthenticatedAdmin({ user, header, children }) {
 
     return (
         <AdminPanelLayout>
-            <ContentLayout title={pageTitle} user={user}>
+            <ContentLayout title={title} user={user} className={className}>
                 {/*<CustomBreadcrumb url={url}/>*/}
                 {children}
             </ContentLayout>

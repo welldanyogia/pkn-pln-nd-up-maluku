@@ -19,21 +19,23 @@ class DatabaseSeeder extends Seeder
 //            'name' => 'Test User',
 //            'email' => 'test@example.com',
 //        ]);
-        User::create([
-            'name' => 'Super Admin',
-            'username' => 'SuperAdmin',
-            'email' => 'superadmin@superadmin.com',
-            'password' => bcrypt('12341234'), // Jangan lupa untuk mengganti password ini
-            'role' => 'superadmin',
-        ]);
+//        User::create([
+//            'name' => 'Super Admin',
+//            'username' => 'SuperAdmin',
+//            'email' => 'superadmin@superadmin.com',
+//            'password' => bcrypt('12341234'), // Jangan lupa untuk mengganti password ini
+//            'role' => 'superadmin',
+//        ]);
 
         // Seed admin
-        User::create([
-            'name' => 'Admin',
-            'username' => 'Admin',
-            'email' => 'admin@admin.com',
-            'password' => bcrypt('12341234'), // Jangan lupa untuk mengganti password ini
-            'role' => 'admin',
-        ]);
+//        User::create([
+//            'name' => 'Admin',
+//            'username' => 'Admin',
+//            'email' => 'admin@admin.com',
+//            'password' => bcrypt('12341234'), // Jangan lupa untuk mengganti password ini
+//            'role' => 'admin',
+//        ]);
+
+        $this->call(ProjectSeeder::class);
     }
 }
