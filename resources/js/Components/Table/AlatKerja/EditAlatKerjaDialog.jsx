@@ -178,9 +178,9 @@ export function EditAlatKerjaDialog({data,projects}) {
             <DialogContent
                 className="mx-auto sm:max-w-[425px] lg:max-w-[800px] text-fountain-blue-400 max-h-[90vh] overflow-y-auto">
                 <DialogHeader>
-                    <DialogTitle className={"text-fountain-blue-400"}>Edit Proyek</DialogTitle>
+                    <DialogTitle className={"text-fountain-blue-400"}>Edit Alat Kerja</DialogTitle>
                     <DialogDescription>
-                        Lakukan perubahan pada proyek Anda di sini. Klik simpan setelah selesai.
+                        Lakukan perubahan pada alat kerja Anda di sini. Klik simpan setelah selesai.
                     </DialogDescription>
                 </DialogHeader>
                 <form onSubmit={handleSubmit}>

@@ -18,15 +18,32 @@ import {
     PopoverTrigger,
 } from "@/components/ui/popover"
 import axios from 'axios';
+import {useState} from "react";
 
-export function CategoryComboBox({ category, setCategory, setID,valueCat }) {
+export function CategoryComboBox({ category, setCategory, setID, valueCat }) {
     const [open, setOpen] = React.useState(false)
     const [value, setValue] = React.useState(valueCat)
+    const [cat, setCat] = useState(category)
     const [inputValue, setInputValue] = React.useState("")
     const [loading, setLoading] = React.useState(false) // Loading state
 
-    // console.log(value)
+    // Function to fetch categories from the API
+    const fetchCategories = async () => {
+        try {
+            const response = await axios.post('/admin/monitoring/proyek/getCategory'); // Adjust URL if necessary
+            if (response.status === 200) {
+                setCategory(response.data); // Update the categories
+                setCat(response.data)
+                console.log('response data :', response.data)
+            } else {
+                console.error('Error fetching categories:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Error fetching categories:', error);
+        }
+    };
 
+    // Function to handle creating a new category
     const handleCreateCategory = async () => {
         if (inputValue.trim()) {
             const newCategory = {
@@ -40,15 +57,20 @@ export function CategoryComboBox({ category, setCategory, setID,valueCat }) {
 
                 if (response.status === 201) {
                     const createdCategory = response.data;
+                    console.log('Created Category:', createdCategory);
 
                     // Update category state to include the new category
-                    setCategory(prevCategories => [...prevCategories, createdCategory]);
+                    setCategory((prevCategories) => [...prevCategories, createdCategory]);
 
-                    // Set the selected value
-                    // setValue(createdCategory.value);
-                    setCategory(createdCategory)
-                    // setID(createdCategory.id)
+                    // Set the selected value and clear input after creation
+                    setCategory(createdCategory);
+                    setValue(createdCategory.value);
                     setInputValue(''); // Clear input after creation
+
+                    // Fetch the updated categories from the API
+                    await fetchCategories();
+                    console.log(category)
+
                     setOpen(false);
                 } else {
                     console.error('Error creating category:', response.statusText);
@@ -71,7 +93,7 @@ export function CategoryComboBox({ category, setCategory, setID,valueCat }) {
                     className="w-[200px] justify-between"
                 >
                     {value
-                        ? category.find((cat) => cat.value === value)?.label
+                        ? cat.find((cat) => cat.value === value)?.label
                         : "Pilih Kategori proyek..."}
                     <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                 </Button>
@@ -117,7 +139,6 @@ export function CategoryComboBox({ category, setCategory, setID,valueCat }) {
                                         value={cat.value}
                                         onSelect={(currentValue) => {
                                             setValue(currentValue === value ? "" : currentValue)
-                                            // setID(cat.id)
                                             setCategory(cat)
                                             setOpen(false)
                                         }}
@@ -136,5 +157,5 @@ export function CategoryComboBox({ category, setCategory, setID,valueCat }) {
                 </Command>
             </PopoverContent>
         </Popover>
-    )
+    );
 }

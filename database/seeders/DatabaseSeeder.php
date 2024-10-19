@@ -28,14 +28,14 @@ class DatabaseSeeder extends Seeder
 //        ]);
 
         // Seed admin
-//        User::create([
-//            'name' => 'Admin',
-//            'username' => 'Admin',
-//            'email' => 'admin@admin.com',
-//            'password' => bcrypt('12341234'), // Jangan lupa untuk mengganti password ini
-//            'role' => 'admin',
-//        ]);
+        User::create([
+            'name' => 'Admin',
+            'username' => 'Admin',
+            'email' => 'admin@admin.com',
+            'password' => bcrypt('12341234'), // Jangan lupa untuk mengganti password ini
+            'role' => 'admin',
+        ]);
 
-        $this->call(ProjectSeeder::class);
+//        $this->call(ProjectSeeder::class);
     }
 }

@@ -15,14 +15,8 @@ class ProjectSeeder extends Seeder
     {
         $projects = [
             [
-                'category' => 'PEMBANGKIT',
+                'category_id' => 1,
                 'nama_pekerjaan' => 'LISDES ZONA MALUKU',
-                'alat_kerja' => [
-                    'total_alat_kerja' => 10,
-                    'kritis' => 2,
-                    'normal' => 6,
-                    'kronis' => 2,
-                ],
                 'tanggal_efektif_kontrak' => '2022-06-30',
                 'jenis_kontrak' => '',
                 'jangka_waktu_bulan' => 60,
@@ -34,14 +28,14 @@ class ProjectSeeder extends Seeder
                 'keterangan' => '',
             ],
             [
-                'category' => 'PEMBANGKIT',
+                'category_id' => 2,
                 'nama_pekerjaan' => 'LISDES ZONA MALUKU UTARA',
-                'alat_kerja' => [
-                    'total_alat_kerja' => 8,
-                    'kritis' => 1,
-                    'normal' => 6,
-                    'kronis' => 1,
-                ],
+//                'alat_kerja' => [
+//                    'total_alat_kerja' => 8,
+//                    'kritis' => 1,
+//                    'normal' => 6,
+//                    'kronis' => 1,
+//                ],
                 'tanggal_efektif_kontrak' => '2022-06-30',
                 'jenis_kontrak' => '',
                 'jangka_waktu_bulan' => 60,
@@ -53,14 +47,14 @@ class ProjectSeeder extends Seeder
                 'keterangan' => '',
             ],
             [
-                'category' => 'DISTRIBUSI',
+                'category_id' => 3,
                 'nama_pekerjaan' => 'YANTEK MMU',
-                'alat_kerja' => [
-                    'total_alat_kerja' => 20,
-                    'kritis' => 3,
-                    'normal' => 15,
-                    'kronis' => 2,
-                ],
+//                'alat_kerja' => [
+//                    'total_alat_kerja' => 20,
+//                    'kritis' => 3,
+//                    'normal' => 15,
+//                    'kronis' => 2,
+//                ],
                 'tanggal_efektif_kontrak' => '2023-04-17',
                 'jenis_kontrak' => '',
                 'jangka_waktu_bulan' => 60,
@@ -72,14 +66,14 @@ class ProjectSeeder extends Seeder
                 'keterangan' => '',
             ],
             [
-                'category' => 'PELAYANAN PELANGGAN',
+                'category_id' => 4,
                 'nama_pekerjaan' => 'BILLMAN MMU',
-                'alat_kerja' => [
-                    'total_alat_kerja' => 12,
-                    'kritis' => 1,
-                    'normal' => 9,
-                    'kronis' => 2,
-                ],
+//                'alat_kerja' => [
+//                    'total_alat_kerja' => 12,
+//                    'kritis' => 1,
+//                    'normal' => 9,
+//                    'kronis' => 2,
+//                ],
                 'tanggal_efektif_kontrak' => '2021-06-08',
                 'jenis_kontrak' => 'Volume Based Per Juni 2023',
                 'jangka_waktu_bulan' => 60,
@@ -91,14 +85,14 @@ class ProjectSeeder extends Seeder
                 'keterangan' => '',
             ],
             [
-                'category' => 'TRANSMISI',
+                'category_id' => 5,
                 'nama_pekerjaan' => 'OPGI UIW MMU',
-                'alat_kerja' => [
-                    'total_alat_kerja' => 15,
-                    'kritis' => 1,
-                    'normal' => 10,
-                    'kronis' => 4,
-                ],
+//                'alat_kerja' => [
+//                    'total_alat_kerja' => 15,
+//                    'kritis' => 1,
+//                    'normal' => 10,
+//                    'kronis' => 4,
+//                ],
                 'tanggal_efektif_kontrak' => '2023-04-17',
                 'jenis_kontrak' => '',
                 'jangka_waktu_bulan' => 60,
@@ -110,14 +104,14 @@ class ProjectSeeder extends Seeder
                 'keterangan' => '',
             ],
             [
-                'category' => 'AIL DOWNLOADER',
+                'category_id' => 1,
                 'nama_pekerjaan' => 'MANAJEMEN AIL',
-                'alat_kerja' => [
-                    'total_alat_kerja' => 7,
-                    'kritis' => 0,
-                    'normal' => 5,
-                    'kronis' => 2,
-                ],
+//                'alat_kerja' => [
+//                    'total_alat_kerja' => 7,
+//                    'kritis' => 0,
+//                    'normal' => 5,
+//                    'kronis' => 2,
+//                ],
                 'tanggal_efektif_kontrak' => '2023-07-25',
                 'jenis_kontrak' => 'Volume Based',
                 'jangka_waktu_bulan' => 12,
